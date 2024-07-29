@@ -39,7 +39,18 @@ closeButton.Font = Enum.Font.SourceSans
 closeButton.TextSize = 14
 closeButton.Parent = titleLabel
 
+-- Connect the close button to a function to hide the mainFrame
+closeButton.MouseButton1Click:Connect(function()
+    mainFrame.Visible = false
+end)
+
 -- Define script URLs for the second set of tools
+local scripts1 = {
+    ["Tp Players"] = "https://pastebin.com/raw/YNVbeqPy",
+    ["Tween Tp"] = "https://raw.githubusercontent.com/0Ben1/fe/main/obf_gtQG8WW70awuM1u2O6I8Z3j007xzGnfC0vw6D6Tzj226R20KPLyKZR8MbK5V57mu.lua.txt",
+    ["Click To Tp"] = "https://raw.githubusercontent.com/shakar60/ClickToTp/main/Script",
+}
+
 local scripts2 = {
     ["Tp Players"] = "https://pastebin.com/raw/YNVbeqPy",
     ["Tween Tp"] = "https://raw.githubusercontent.com/0Ben1/fe/main/obf_gtQG8WW70awuM1u2O6I8Z3j007xzGnfC0vw6D6Tzj226R20KPLyKZR8MbK5V57mu.lua.txt",
@@ -82,5 +93,6 @@ local function ToggleTools()
         yOffset = yOffset + 35
     end
 end
+
 -- Initial display of tools
 ToggleTools()
